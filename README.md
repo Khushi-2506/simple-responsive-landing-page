@@ -25,3 +25,9 @@ Build a clean, responsive landing page using **HTML & CSS**.
 ![Landing Page Preview](./screenshots/preview.png)
 
 ## 📂 Folder Structure
+
+## 👩‍💻 Author
+**Khushi Shah**  
+*Task 1 – Create a Simple Responsive Landing Page using HTML & CSS*  
+📅 *Date:* November 2025  
+💻 *Tools Used:* VS Code, Chrome, Live Server 
