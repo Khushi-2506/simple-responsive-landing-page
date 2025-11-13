@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modern Responsive Landing Page</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- AOS Scroll Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">MyBrand</div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">&#9776;</div>
+    </nav>
+    <button id="themeToggle">🌙</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Welcome to MyBrand</h1>
+      <p>Building modern, responsive, and elegant web experiences for everyone.</p>
+      <a href="#contact" class="btn">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features" data-aos="fade-up">
+    <h2>Why Choose Us</h2>
+    <div class="feature-container">
+      <div class="feature-card">
+        <h3>⚡ Fast Performance</h3>
+        <p>Experience lightning-fast load times with optimized design and coding.</p>
+      </div>
+      <div class="feature-card">
+        <h3>💎 Clean Design</h3>
+        <p>Enjoy a minimal, elegant layout that adapts beautifully to any device.</p>
+      </div>
+      <div class="feature-card">
+        <h3>🔒 Secure</h3>
+        <p>Your data and privacy are our top priorities in everything we build.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery" data-aos="fade-up">
+    <h2>Our Work</h2>
+    <div class="gallery-grid">
+      <img src="https://picsum.photos/400/250?random=1" alt="Gallery image">
+      <img src="https://picsum.photos/400/250?random=2" alt="Gallery image">
+      <img src="https://picsum.photos/400/250?random=3" alt="Gallery image">
+      <img src="https://picsum.photos/400/250?random=4" alt="Gallery image">
+      <img src="https://picsum.photos/400/250?random=5" alt="Gallery image">
+      <img src="https://picsum.photos/400/250?random=6" alt="Gallery image">
+    </div>
+  </section>
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact" data-aos="fade-up">
+    <h2>Stay in Touch</h2>
+    <p>Subscribe to our newsletter for the latest updates and offers!</p>
+    <form>
+      <input type="email" placeholder="Enter your email" required />
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 MyBrand. All rights reserved.</p>
+    <div class="social-links">
+      <a href="#">🌐</a>
+      <a href="#">🐦</a>
+      <a href="#">📸</a>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollTopBtn">⬆</button>
+
+  <!-- JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // AOS initialization
+    AOS.init();
+
+    // Mobile Menu
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+    menuToggle.addEventListener('click', () => nav.classList.toggle('active'));
+
+    // Dark Mode Toggle
+    const themeBtn = document.getElementById("themeToggle");
+    themeBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      themeBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+    });
+
+    // Scroll to Top Button
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.addEventListener("scroll", () => {
+      scrollBtn.style.display = window.scrollY > 400 ? "block" : "none";
+    });
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
